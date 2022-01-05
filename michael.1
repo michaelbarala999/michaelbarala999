@@ -1,0 +1,45 @@
+first doubly linked list program in jave 
+import java.util.Scanner;
+class node {
+    int data;
+    node next;
+    node pre;
+    node(int a){
+        data=a;
+        
+    }
+}
+
+public class MyClass {
+    
+   public static  node fun(int n){
+        Scanner c =new Scanner(System.in) ;
+        node m1=new node(c.nextInt());
+        node current=m1;
+        for(int i=0;i<n-1;i++){
+              m1.next = new node(c.nextInt());
+             m1.next.pre=m1;
+             m1=m1.next;
+            
+        }
+         return current;
+        
+        
+    }
+     
+
+    public static void main(String args[]) {
+    int n=4;
+    node m2=new node (78);
+    m2.next=new node(45);
+    m2.next.next=new node (43);
+    m2.next.pre=m2;
+    m2.next.next.pre=m2.next;
+    node current= fun(n);
+    node curr=m2;
+    while(curr!=null){
+        System.out.println(curr.data);
+        curr=curr.next;
+    }
+     
+}}
