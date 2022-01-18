@@ -1,1 +1,92 @@
-sdbd
+why git -- we can easily recover the file and we can do undo and delete easily
+we can easily roll back to previous working stage (kab kya kiya tha , time to time )
+
+HISTORY OF VCS 
+1 Local vcs -- use data base to keep track of file but we can easily loose our data if we loose hard disk 
+2 Centralised vcs -- server damaged problem
+3 Distributed vcs -- in this everyone have full backup , server damage hone pr we can take data from other user.
+
+Git configuration -----
+git config --global user.name "michaelchoudhary"
+git config --global user.email"michaelbarala999@gmail.com"
+
+IN git we have three stage
+(1) working directory -- 
+(2) staging area 
+(3) git directory
+ During a git repo. a .git folder aslo create itself which provide us whatever we whant about that folder , that .git folder is hidden basically
+
+*********************************************************************************************************************************************************
+first we use command -----  git status  (it tell about , is it a git repositry or not )
+# command to create file in git repositry --- git init
+# command for commit -- git commit -m "first commit"
+# command for all last commit -- git log
+# command for add a file ----- git add filename
+********************************************************************************************************************************************************
+TO Delete a Git Repositry
+rm-rf.git
+********************************************************************************************************************************************************
+TO MAKE A FILE COLON
+ git colon URL filename
+TO fIND WHERE ARE YOU use command 
+ git pwd (present working directory)
+ ls (to list all content )
+ cd - filename/ ---- this use to go in a perticular file or folder
+*******************************************************************************************************************************************************
+                                    untracked                  unmodified                  modified                  staged 
+                                         -------add file---------->>
+                                                                    -----edit file--------->> 
+                                                                                             ----------stage the file -->
+                                                                   <<<<<---------------------commit --------------------
+                                         <<<-------remove file---------                         
+
+          git add --a ( use to add all file ) phle add krege fir modified k baad fir se add krege fir commit krege to fir se sab first stage pr aa jaega 
+***********************************************************************************************************************************************************
+ IGNORE A FILE 
+ $ touch error.log ( to create a file )
+ $ touch .gitignore ( by this we create a file and if we write a file name in this then that file we ignore that file for a given dipositry   (michaelfolder/))
+                     ( *.log -- means ignore all file with .log )
+                     ( /folder/ only outer folder will ignore by this )
+**************************************************************************************************************************************************************
+
+FIND DIFFERENCE B/w WORKING TO STAGED AREA 
+  git diff
+  git diff --staged ( compare b/w staging area  to last commit  )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
