@@ -53,7 +53,7 @@ FIND DIFFERENCE B/w WORKING TO STAGED AREA
   git diff
   git diff --staged ( compare b/w staging area  to last commit  )
 
-
+michael choudhary
 
 
 
