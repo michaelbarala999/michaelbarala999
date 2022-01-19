@@ -1,7 +1,7 @@
 why git -- we can easily recover the file and we can do undo and delete easily
 we can easily roll back to previous working stage (kab kya kiya tha , time to time )
 
-HISTORY OF VCS 
+HISTORY OF VCS (VERSION CONTROL SYSTEM)
 1 Local vcs -- use data base to keep track of file but we can easily loose our data if we loose hard disk 
 2 Centralised vcs -- server damaged problem
 3 Distributed vcs -- in this everyone have full backup , server damage hone pr we can take data from other user.
@@ -17,18 +17,18 @@ IN git we have three stage
  During a git repo. a .git folder aslo create itself which provide us whatever we whant about that folder , that .git folder is hidden basically
 
 *********************************************************************************************************************************************************
-first we use command -----  git status  (it tell about , is it a git repositry or not )
-# command to create file in git repositry --- git init
+first we use command -----  git status  (it tell about , is it a git repositary or not )
+# command to create file in git repositary --- git init
 # command for commit -- git commit -m "first commit"
 # command for all last commit -- git log
 # command for add a file ----- git add filename
 ********************************************************************************************************************************************************
-TO Delete a Git Repositry
+TO Delete a Git Repositary
 rm-rf.git
 ********************************************************************************************************************************************************
 TO MAKE A FILE COLON
  git colon URL filename
-TO fIND WHERE ARE YOU use command 
+TO fiND WHERE ARE YOU use command 
  git pwd (present working directory)
  ls (to list all content )
  cd - filename/ ---- this use to go in a perticular file or folder
@@ -48,12 +48,76 @@ TO fIND WHERE ARE YOU use command
                      ( *.log -- means ignore all file with .log )
                      ( /folder/ only outer folder will ignore by this )
 **************************************************************************************************************************************************************
+Changing area skip , means we can directly commit without add . or adding file in stagging area 
+use    git commit -a -m "commit initialise"
+******************************************************************************************************************************************************************
 
 FIND DIFFERENCE B/w WORKING TO STAGED AREA 
   git diff
   git diff --staged ( compare b/w staging area  to last commit  )
 
-michael choudhary
+**************************************************************************************************************************************************************
+first we will check $ git remote ----- (that will tell us that we have any remote for this repo or not )
+ to push  anything we use -----------git  push -u origin main 
+push a repo. to gihub account 
+ first do google SSH key creation
+paste the URL in git bash                              ssh-keygen -t ed25519 -C "michaelbarala999.com"
+then enter 2..3 times 
+then run the agent by pasting this eval               "$(ssh-agent -s)"
+then we will get out id 
+Add your SSH private key to the ssh-agent.           $ ssh-add ~/.ssh/id_ed25519
+for getting the SSH key use command                  $ tail ~/.ssh/id_ed25519.pub
+now we will our key then copy it and paste it in our github account.
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Banch Develop 
+git merge branchname  ( use for merging branch )
+git branch ( it will tell us how many branch we have )
+git checkout -b develop ---( we use this to create new delevop branch and switch into it)  { -b use when we want  to create a new branch }
+ in a branch we can work separatly without changing in master branch 
+ git checkout master -----  we will come in master branch 
+ git checkout develop ------ we will come in develop branch , where we made some change 
+{ this was the branch topic but durig this we shoud keep in mind that git ignore the empty file and folder and also ignore the .gitignore file also}
+***************************************************************************************************************************************************************************************************
+Merge conflict  (A<<--------B<-----------c) ( durnig the branch it just keep change and a pointer which show exising data )
+when same change in master and banch then during merge which one will consider 
+so during merge our editor ask that which one we want to keep 
+conflict resolution operator <<<<<<<<< we choose which we want to keep manualy 
+****************************************************************************
+Branch management 
+git merge branchname  
+git branch -v  ( commit hash     last one commit message)
+git branch -- merge ( show all branch which already merged brach)
+git branch --no-merge (show all branch which is not merged till )
+ 
+DELETING A BRANCH 
+git branch -d develop  ( gives error if develop is not merge means if branch is not merge and we want to delete than it will through error)
+git branch -D branchname  ( it will show no error and delete the branch )
+
+git me branch bnana bilkul easy h or memory b nhi leta 
+
+**********************************************************************************************************************
+BRANCHING WORKFLOW 
+(!) long running branch 
+                                                                                          
+ ----->master
+ |----->develop
+|------>purposed branch 
+
+(II) topic branching   
+----------> replsce text with typed js 
+these are there till we need them in this project 
+
+
+**********************************************************************************************************************
+push git repository 
+git push origin master ( master ko push krne k liye )
+git push -d origin bugfix ( bugfix jo github pr h usko delete krne k liye )
+ 
+
+
+
+
+
 
 
 
